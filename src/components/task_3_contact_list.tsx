@@ -1,13 +1,8 @@
-import React from 'react';
-import './App.css';
-
-// import Contact from './components/contact'
-
+import React from "react";
 
 type ContactList = { name: string, phoneNumber: number, eMailAddress: string, address: string }
 
-const App: React.FC = () => {
-
+const ContactList: React.FC = () => {
     const listContact: ContactList[] = [
         {
             name: 'Jan',
@@ -24,8 +19,7 @@ const App: React.FC = () => {
     ];
     
     return (
-
-        <div>
+        <div className="borderBottom">
             <h1>Lista kontaktów</h1>
             {listContact.map(contact => (
                 <div key={contact.name}>
@@ -36,8 +30,8 @@ const App: React.FC = () => {
                 </div>
             ))}
         </div>
-        
-    );
+    )
+    
 };
 
-export default App;
+export default ContactList;
